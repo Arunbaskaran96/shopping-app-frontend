@@ -55,7 +55,7 @@ function Mobiles() {
               //      </div>
               //   </div>
               // </div>
-              <div className='col-12 admin-mini-card'>
+              <div className='col-md-12 admin-mini-card'>
               <div className='row'>
                   <div className='col-3'>
                       <img className='admin-mobile-image' src={item.img} alt="mobile-image"/>

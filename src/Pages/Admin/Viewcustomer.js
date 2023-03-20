@@ -27,12 +27,12 @@ function Viewcustomer() {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-2'>
+        <div className='col-md-2'>
           <Link to='/navbar/admincustomer'  className='btn btn-info'>Back</Link>
         </div>
       </div>
       <div className='row user-container' >
-        <div className='col-4' style={{textAlign:"end"}}>
+        <div className='col-md-4' style={{textAlign:"end"}}>
           <label className='user-lbl'>Name :</label><br/>
           <label className='user-lbl'>Email :</label><br/>
           <label className='user-lbl'>Mobile :</label><br/>
@@ -40,7 +40,7 @@ function Viewcustomer() {
           <label className='user-lbl'>City</label><br/>
           <label className='user-lbl'>Pincode :</label><br/>
         </div>
-        <div className='col-8'>
+        <div className='col-md-8'>
           <h6 className='user-result'>{user.name}</h6>
           <h6 className='user-result'>{user.email}</h6>
           <h6 className='user-result'>{user.mobile}</h6>

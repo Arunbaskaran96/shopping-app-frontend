@@ -28,17 +28,17 @@ function ProductDetails() {
   return (
     <div className='container '>
         <div className='row'>
-            <div className='col-2'>
+            <div className='col-md-2'>
                 <Link to='/navbar/adminorder' className='btn btn-primary'>Back</Link>
             </div>
         </div>
         <div className='row '>
-            <div className='col-10' style={{textAlign:"center"}}>
+            <div className='col-md-10' style={{textAlign:"center"}}>
                 <img style={{height:"200px"}} src={order.img} alt='mobile-image'/>
             </div>
         </div>
         <div className='row' >
-            <div className='col-5' style={{textAlign:"end"}}>
+            <div className='col-md-5' style={{textAlign:"end"}}>
                 <label className='productdetail-label'>Ordered By :</label><br/>
                 <label className='productdetail-label'>Customer Address :</label><br/>
                 <label className='productdetail-label'>Customer city :</label><br/>
@@ -46,7 +46,7 @@ function ProductDetails() {
                 <label className='productdetail-label'>Model :</label><br/>
                 <label className='productdetail-label'>price :</label><br/>
             </div>
-            <div className='col-7'>
+            <div className='col-md-7'>
                 <h6 className='produtdetail-result'>{user.name}</h6>
                 <h6 className='produtdetail-result'>{user.address}</h6>
                 <h6 className='produtdetail-result'>{user.city}</h6>

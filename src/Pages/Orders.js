@@ -25,14 +25,14 @@ function Orders() {
         odr.map((item)=>{
           return(
             <div className='row order-container'>
-              <div className='col-3 ' style={{textAlign:"center"}}>
+              <div className='col-md-3 ' style={{textAlign:"center"}}>
                 <img className='order-img' src={item.img} alt='item-img'></img>
               </div>
-              <div className='col-5' style={{marginTop:"10px"}} >
+              <div className='col-md-5' style={{marginTop:"10px"}} >
                 <h5>Brand-{item.companyname}</h5>
                 <p>Model-{item.model}</p>
               </div>
-              <div className='col-4' style={{marginTop:"30px"}}>
+              <div className='col-md-4' style={{marginTop:"30px"}}>
                 <h5>Price-{item.price}</h5>
               </div>
           </div>

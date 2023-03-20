@@ -33,7 +33,7 @@ function YourProfile() {
           </div>
         ): (
           <div className='row ' style={{marginTop:"100px"}}>
-          <div className='col-5 ' style={{textAlign:"end"}}>
+          <div className='col-md-5 ' style={{textAlign:"end"}}>
             <h6 className='profile-tags'>Name :</h6>
             <h6 className='profile-tags'>Email :</h6>
             <h6 className='profile-tags'>Contact :</h6>
@@ -41,7 +41,7 @@ function YourProfile() {
             <h6 className='profile-tags'>Address :</h6>
             <h6 className='profile-tags'>Pincode :</h6>
           </div>
-          <div className='col-7'>
+          <div className='col-md-7'>
             <p className='profile-edit'>{user.name}</p>
             <p className='profile-edit'>{user.email}</p>
             <p className='profile-edit'>{user.mobile}</p>

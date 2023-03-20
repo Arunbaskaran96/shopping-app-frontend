@@ -62,16 +62,16 @@ function Login() {
         <div className='row'>
             <div className='col-4'>
                 <div className='row'>
-                    <div className='col-12 login-leftside'>
+                    <div className='col-md-12 login-leftside'>
                         <img className='login-img' src='https://doctorzbook.netlify.app/static/media/auth-logo.c8a07bf4.svg' alt='login-image'></img>
                         <p className='text-center' style={{marginTop:"80px"}}>Don't have an account</p>
                         <Link className='text-center login-signup' to='/register' style={{marginLeft:"175px",marginTop:"10px"}}>Sign up</Link>
                     </div>
                 </div>
             </div>
-            <div className='col-8 login-rightside'>
+            <div className='col-md-8 login-rightside'>
                 <div className='row' style={{marginTop:"60px"}}>
-                    <div className='col-12 text-center'>
+                    <div className='col-md-12 text-center'>
                         <form onSubmit={formik.handleSubmit}>
                             <h1 className='login-heading text-center'>Sign in</h1>
                             <label style={{marginTop:"20px",fontSize:"20px",fontStyle:"italic",marginLeft:"-290px"}}>Email</label><br/>
@@ -85,17 +85,17 @@ function Login() {
                     </div>
                 </div>
                 <div className='row'>
-                    <div className='col-12 text-center'>
+                    <div className='col-md-12 text-center'>
                         <Link to='/forgot-password' className='btn btn-info forgot-pass-button'>Forgot password</Link>
                     </div>
                 </div>
                 <div className='row' style={{marginTop:"25px"}}>
-                    <div className='col-6 text-center'>
+                    <div className='col-md-6 text-center'>
                         <h6>User Credentail</h6>
                         <p className='login-cred'>Email:arun@gmail.com</p>
                         <p className='login-cred'>password:Arun</p>
                     </div>
-                    <div className='col-6 text-center'>
+                    <div className='col-md-6 text-center'>
                         <h6>Admin Credentail</h6>
                         <p className='login-cred'>Email:admin@gmail.com</p>
                         <p className='login-cred'>password:Admin</p>

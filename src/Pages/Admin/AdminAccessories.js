@@ -37,7 +37,7 @@ function AdminAccessories() {
   return (
     <div className='container admin-access-container'>
         <div className='row' style={{marginTop:"15px"}}>
-            <div className='col-2'>
+            <div className='col-md-2'>
                 <Link to='/navbar/addaccessories' className='btn btn-info'>Add Accessories</Link>
             </div>
         </div>
@@ -57,12 +57,12 @@ function AdminAccessories() {
                         //         </div>
                         //     </div>
                         // </div>
-                        <div className='col-12 admin-mini-card'>
+                        <div className='col-md-12 admin-mini-card'>
                         <div className='row'>
-                            <div className='col-3'>
+                            <div className='col-md-3'>
                                 <img className='admin-mobile-image' src={item.img} alt="mobile-image"/>
                             </div>
-                            <div className='col-9'>
+                            <div className='col-md-9'>
                                 <h6 className='admin-mobile-brand'>Brand :{item.companyname}</h6>
                                 <h6 className='admin-mobile-model'>Model :{item.model}</h6>
                                 <p className='admin-mobile-price'>Price: {item.price}</p>

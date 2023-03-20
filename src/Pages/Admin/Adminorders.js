@@ -25,7 +25,7 @@ function Adminorders() {
   return (
     <div className='container'>
       <div className='row'>
-        <div className='col-12'>
+        <div className='col-md-12'>
           <table class="table" style={{boxShadow:"10px 10px 10px black",marginTop:"25px"}}>
             <thead className='table-dark'>
               <tr>

@@ -21,7 +21,7 @@ function Admincustomer() {
   return (
     <div className='container'>
         <div className='row'>
-            <div className='col-12'>
+            <div className='col-md-12'>
                 <table class="table table-container">
                     <thead className='table table-dark'>
                         <tr>

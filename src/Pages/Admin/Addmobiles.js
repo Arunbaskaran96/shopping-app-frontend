@@ -50,19 +50,19 @@ function Addmobiles() {
   return (
     <div className='container add-access-mobile'>
       <div className='row'>
-        <div className='col-2'>
+        <div className='col-md-2'>
           <Link to='/navbar/adminhome' className='btn btn-primary'>Back</Link>
         </div>
       </div>
       <form onSubmit={formik.handleSubmit}>
         <div className='row'>
-          <div className='col-4' style={{textAlign:"end"}}>
+          <div className='col-md-4' style={{textAlign:"end"}}>
             <label className='addmobile-label'>Company name :</label><br/>
             <label className='addmobile-label'>Model :</label><br/>
             <label className='addmobile-label'>Price :</label><br/>
             <label className='addmobile-label'>Img Url :</label><br/>
           </div>
-          <div className='col-8'>
+          <div className='col-md-8'>
             <input name='companyname' value={formik.values.companyname} onChange={formik.handleChange} className='addmobile-input' type='text'></input><span style={{color:"red"}}>{formik.errors.companyname}</span><br/>
             <input name='model' value={formik.values.model} onChange={formik.handleChange}  className='addmobile-input' type='text'></input><span style={{color:"red"}}>{formik.errors.model}</span><br/>
             <input name='img' value={formik.values.img} onChange={formik.handleChange}  className='addmobile-input' type='text'></input><span style={{color:"red"}}>{formik.errors.price}</span><br/>

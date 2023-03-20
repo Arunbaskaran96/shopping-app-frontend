@@ -55,13 +55,13 @@ function Register() {
   return (
     <div className='container'>
         <div className='row'>
-            <div className='col-2'>
+            <div className='col-md-2'>
                 <Link to='/' className='btn btn-info'>Back</Link>
             </div>
         </div>
         <form onSubmit={formik.handleSubmit}>
             <div className='row register-container' style={{marginTop:"50px"}}>
-                <div className='col-4' style={{textAlign:"end"}}>
+                <div className='col-md-4' style={{textAlign:"end"}}>
                     <label className='register-label'>Name :</label><br></br>
                     <label className='register-label'>Email :</label><br></br>
                     <label className='register-label'>Password :</label><br></br>
@@ -70,7 +70,7 @@ function Register() {
                     <label className='register-label'>Address :</label><br></br>
                     <label className='register-label'>Pincode :</label><br></br>
                 </div>
-                <div className='col-8'>
+                <div className='col-md-8'>
                     <input name='name' value={formik.values.name} onChange={formik.handleChange} className='register-int' type='text'></input><span style={{color:"red"}}>{formik.errors.name}</span><br></br>
                     <input name='email' value={formik.values.email} onChange={formik.handleChange} className='register-int' type='email'></input><span style={{color:"red"}}>{formik.errors.email}</span><br></br>
                     <input name='password' value={formik.values.password} onChange={formik.handleChange} className='register-int' type='password'></input><span style={{color:"red"}}>{formik.errors.password}</span><br></br>

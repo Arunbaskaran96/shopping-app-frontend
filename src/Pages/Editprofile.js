@@ -81,7 +81,7 @@ function Editprofile() {
         </div>
             <form onSubmit={formik.handleSubmit}>
                 <div  style={{marginTop:"50px"}} className='row'>
-                    <div className='col-4' style={{textAlign:"end"}}>
+                    <div className='col-md-4' style={{textAlign:"end"}}>
                         <label className='edit-label'>Name</label><br/>
                         <label className='edit-label'>Email</label><br/>
                         <label className='edit-label'>Contact</label><br/>
@@ -89,7 +89,7 @@ function Editprofile() {
                         <label className='edit-label'>City</label><br/>
                         <label className='edit-label'>Pincode</label><br/>
                     </div>
-                <div className='col-8'>
+                <div className='col-md-8'>
                     <input name='name' value={formik.values.name} onChange={formik.handleChange} className='edit-int' type='text'></input>
                     <span style={{color:"red"}}>{formik.errors.name}</span><br/>
                     <input name='email' value={formik.values.email} onChange={formik.handleChange} className='edit-int' type='email'></input>

@@ -38,19 +38,19 @@ function Cart() {
       <div className='row'>
         <div className='col-md-8'>
           <div className='row'>
-            <div className='col-12'>
+            <div className='col-md-12'>
               {
                 cartitems.map((item)=>{
                   return(
                     <div className='row cart-container'>
-                      <div className='col-1'>
+                      <div className='col-md-1'>
                         <img className='cart-img' src={item.img} alt=''/>
                       </div>
-                      <div className='col-5'>
+                      <div className='col-md-5'>
                         <h6>{item.model}</h6>
                         <h6>{item.price}</h6>
                       </div>
-                      <div className='col-3'>
+                      <div className='col-md-3'>
                           <button onClick={()=>remove(item)} className='btn btn-danger btn-sm'>Remove Cart</button>
                       </div>
                     </div>
@@ -61,7 +61,7 @@ function Cart() {
         </div>
         <div className='col-md-4'>
           <div className='row'>
-            <div className='col-12'>
+            <div className='col-md-12'>
               {
                 cartitems.length>0?cartitems.map((item)=>{
                   return(
