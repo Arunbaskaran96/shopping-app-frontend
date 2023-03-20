@@ -33,7 +33,7 @@ function Addaccessories() {
         onSubmit:async(value)=>{
             try {
                 setDisable(true)
-                await axios.post("http://localhost:8000/accessories",value,{
+                await axios.post("https://shopify-backend-x9ad.onrender.com/accessories",value,{
                     headers:{
                         Authorization:`${window.localStorage.getItem("token")}`
                     }

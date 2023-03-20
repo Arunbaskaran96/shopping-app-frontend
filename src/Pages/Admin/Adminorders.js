@@ -11,7 +11,7 @@ function Adminorders() {
 
   const getOrders=async()=>{
     try {
-      const order=await axios.get("http://localhost:8000/allorders",{
+      const order=await axios.get("https://shopify-backend-x9ad.onrender.com/allorders",{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }

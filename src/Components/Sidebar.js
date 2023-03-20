@@ -12,7 +12,7 @@ function Sidebar() {
         getCart()
     },[cartlist])
     const getCart=async()=>{
-        const cartlist=await axios.get("http://localhost:8000/carts",{
+        const cartlist=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
             headers:{
                 Authorization:`${window.localStorage.getItem("token")}`
             }

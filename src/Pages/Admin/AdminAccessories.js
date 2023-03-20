@@ -11,7 +11,7 @@ function AdminAccessories() {
     },[])
 
     const getProduct=async()=>{
-        const access=await axios.get("http://localhost:8000/accessorieses",{
+        const access=await axios.get("https://shopify-backend-x9ad.onrender.com/accessorieses",{
             headers:{
                 Authorization:`${window.localStorage.getItem("token")}`
             }
@@ -22,7 +22,7 @@ function AdminAccessories() {
     const remove=async(item)=>{
         try {
             setDisable(true)
-            await axios.delete(`http://localhost:8000/accessorieses/${item._id}`,{
+            await axios.delete(`https://shopify-backend-x9ad.onrender.com/accessorieses/${item._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

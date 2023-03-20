@@ -43,7 +43,7 @@ function Editprofile() {
         onSubmit:async(value)=>{
             try {
                 setDisable(true)
-                await axios.put("http://localhost:8000/editprofile",value,{
+                await axios.put("https://shopify-backend-x9ad.onrender.com/editprofile",value,{
                     headers:{
                         Authorization:`${window.localStorage.getItem("token")}`
                     }
@@ -62,7 +62,7 @@ function Editprofile() {
 
     const getUser=async()=>{
         try {
-            const user=await axios.get("http://localhost:8000/user",{
+            const user=await axios.get("https://shopify-backend-x9ad.onrender.com/user",{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

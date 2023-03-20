@@ -16,7 +16,7 @@ function Accessories() {
   },[])
 
   const getAccessories=async()=>{
-    const access=await axios.get("http://localhost:8000/accessorieses",{
+    const access=await axios.get("https://shopify-backend-x9ad.onrender.com/accessorieses",{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
@@ -26,7 +26,7 @@ function Accessories() {
 
 
   const addCart=async(item)=>{
-    const access=await axios.post("http://localhost:8000/addcart",item,{
+    const access=await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }

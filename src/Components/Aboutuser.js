@@ -11,7 +11,7 @@ function Aboutuser() {
 
     const getUser=async()=>{
         try {
-            const customer=await axios.get("http://localhost:8000/user",{
+            const customer=await axios.get("https://shopify-backend-x9ad.onrender.com/user",{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

@@ -34,7 +34,7 @@ function Editproduct() {
         onSubmit:async(value)=>{
             try {
                 setDisable(true)
-                await axios.put(`http://localhost:8000/editproduct/${params.id}`,value,{
+                await axios.put(`https://shopify-backend-x9ad.onrender.com/editproduct/${params.id}`,value,{
                     headers:{
                         Authorization:`${window.localStorage.getItem("token")}`
                     }
@@ -53,7 +53,7 @@ function Editproduct() {
     },[])
     const getProduct=async()=>{
         try {
-           const prod= await axios.get(`http://localhost:8000/mobile/${params.id}`,{
+           const prod= await axios.get(`https://shopify-backend-x9ad.onrender.com/mobile/${params.id}`,{
             headers:{
                 Authorization:`${window.localStorage.getItem("token")}`
             }

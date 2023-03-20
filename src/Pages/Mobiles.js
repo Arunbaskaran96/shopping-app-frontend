@@ -16,7 +16,7 @@ function Mobiles() {
   },[products])
   
   const getMobiles=async()=>{
-    const mobile=await axios.get("http://localhost:8000/mobiles",{
+    const mobile=await axios.get("https://shopify-backend-x9ad.onrender.com/mobiles",{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
@@ -27,7 +27,7 @@ function Mobiles() {
 
   const addCart=async(item)=>{
     try {
-      const mobile=await axios.post("http://localhost:8000/addcart",item,{
+      const mobile=await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }

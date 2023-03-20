@@ -15,7 +15,7 @@ function Cart() {
   },[cartitems])
 
   const getCart=async()=>{
-    const cartList=await axios.get("http://localhost:8000/carts",{
+    const cartList=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
@@ -26,7 +26,7 @@ function Cart() {
   const remove=async(item)=>{
     try {
       alert("Do you want to remove?")
-      await axios.delete(`http://localhost:8000/cartdelete/${item._id}`)
+      await axios.delete(`https://shopify-backend-x9ad.onrender.com/cartdelete/${item._id}`)
       getCart()
     } catch (error) {
       console.log(error)

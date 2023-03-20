@@ -12,7 +12,7 @@ function Orders() {
     getOrders()
   },[])
   const getOrders=async()=>{
-    const order=await axios.get("http://localhost:8000/orders",{
+    const order=await axios.get("https://shopify-backend-x9ad.onrender.com/orders",{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }

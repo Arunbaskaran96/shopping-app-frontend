@@ -15,7 +15,7 @@ function Home() {
     },[])
 
     const getMobile=async()=>{
-        const product=await axios.get("http://localhost:8000/mobiles",{
+        const product=await axios.get("https://shopify-backend-x9ad.onrender.com/mobiles",{
             headers:{
                 Authorization:`${window.localStorage.getItem("token")}`
             }
@@ -26,7 +26,7 @@ function Home() {
     const remove=async(item)=>{
         try {
             setDisable(true)
-            await axios.delete(`http://localhost:8000/deleteproduct/${item._id}`,{
+            await axios.delete(`https://shopify-backend-x9ad.onrender.com/deleteproduct/${item._id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

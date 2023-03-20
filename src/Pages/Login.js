@@ -26,7 +26,7 @@ function Login() {
         onSubmit:async(value)=>{
             try {
                 setDisable(true)
-                const login=await axios.post("http://localhost:8000/login",value)
+                const login=await axios.post("https://shopify-backend-x9ad.onrender.com/login",value)
                 window.localStorage.setItem("token",login.data.token)
                 if(login.data.user.role==="User"){
                     nav("/navbar/mobiles")

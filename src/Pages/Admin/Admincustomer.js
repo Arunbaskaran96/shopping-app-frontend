@@ -11,7 +11,7 @@ function Admincustomer() {
     },[])
 
     const getCustomer=async()=>{
-        const users=await axios.get("http://localhost:8000/users",{
+        const users=await axios.get("https://shopify-backend-x9ad.onrender.com/users",{
             headers:{
                 Authorization:`${window.localStorage.getItem("token")}`
             }

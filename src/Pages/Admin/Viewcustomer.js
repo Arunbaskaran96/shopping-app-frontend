@@ -13,7 +13,7 @@ function Viewcustomer() {
 
     const getUser=async()=>{
       try {
-        const customer=await axios.get(`http://localhost:8000/user/${params.id}`,{
+        const customer=await axios.get(`https://shopify-backend-x9ad.onrender.com/user/${params.id}`,{
           headers:{
             Authorization:`${window.localStorage.getItem("token")}`
           }

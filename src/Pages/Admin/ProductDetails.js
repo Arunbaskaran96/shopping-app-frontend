@@ -14,7 +14,7 @@ function ProductDetails() {
 
     const getOrder=async()=>{
         try {
-            const orderview=await axios.get(`http://localhost:8000/allorders/${params.id}`,{
+            const orderview=await axios.get(`https://shopify-backend-x9ad.onrender.com/allorders/${params.id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

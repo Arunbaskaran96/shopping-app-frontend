@@ -34,7 +34,7 @@ function Editaccessories() {
         onSubmit:async(value)=>{
             try {
                 setDisable(true)
-                await axios.put(`http://localhost:8000/accessorieses/${params.id}`,value,{
+                await axios.put(`https://shopify-backend-x9ad.onrender.com/accessorieses/${params.id}`,value,{
                     headers:{
                         Authorization:`${window.localStorage.getItem("token")}`
                     }
@@ -54,7 +54,7 @@ function Editaccessories() {
 
     const getAccess=async()=>{
         try {
-            const acs=await axios.get(`http://localhost:8000/accessorieses/${params.id}`,{
+            const acs=await axios.get(`https://shopify-backend-x9ad.onrender.com/accessorieses/${params.id}`,{
                 headers:{
                     Authorization:`${window.localStorage.getItem("token")}`
                 }

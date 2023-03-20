@@ -34,7 +34,7 @@ function Addmobiles() {
     onSubmit:async(value)=>{
       try {
         setDisable(true)
-        await axios.post("http://localhost:8000/mobile",value,{
+        await axios.post("https://shopify-backend-x9ad.onrender.com/mobile",value,{
           headers:{
             Authorization:`${window.localStorage.getItem("token")}`
           }

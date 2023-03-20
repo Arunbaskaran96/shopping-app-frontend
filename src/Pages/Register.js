@@ -44,7 +44,7 @@ function Register() {
         },
         onSubmit:async(value)=>{
             try {
-                await axios.post("http://localhost:8000/register",value)
+                await axios.post("https://shopify-backend-x9ad.onrender.com/register",value)
                 alert("Created")
                 nav("/")
             } catch (error) {
