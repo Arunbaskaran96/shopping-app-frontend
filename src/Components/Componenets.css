@@ -1,0 +1,152 @@
+i{
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.sidebar-container{
+    box-shadow: 02px 4px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgb(6, 105, 105);
+}
+
+.sidebar-container-admin{
+    box-shadow: 02px 4px rgba(0,0,0,0.4);
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color:#74a1eb;
+}
+
+/* input#menu{
+    display: none;
+} */
+
+/* .icon{
+    display: block;
+    height: 24px;
+    width: 24px;
+    padding: 16px;
+    cursor: pointer;
+    z-index: 200;
+} */
+
+
+/* nav{
+    padding-top: 60px;
+    transition: width ease .6s;
+    width: 60px;
+    z-index: 100;
+    overflow: hidden;
+} */
+nav{
+    padding-top: 60px;
+    transition: width ease .6s;
+    width: 200px;
+    z-index: 100;
+    overflow: hidden;
+}
+
+
+
+/* 
+#menu:checked ~nav{
+    width: 200px;
+} */
+
+nav ul{
+    list-style: none;
+}
+
+.sidebar-ul{
+    padding-left: 20px;
+}
+
+nav li{
+    line-height: 60px;
+    transition: all .3s;
+}
+
+nav li:hover{
+    cursor: pointer;
+    background-color:black;
+    color: black
+}
+
+.menu-text{
+    display: inline-block;
+    margin-left: 20px;
+    transform: translateY(-5px);
+    color: whitesmoke;
+}
+
+@media only screen and (max-width:768px) {
+    nav{
+        padding-top: 60px;
+        transition: width ease .6s;
+        width: 60px;
+        z-index: 100;
+        overflow: hidden;
+    }
+    .menu-text{
+        display: block;
+        margin-left: 0;
+        color: whitesmoke;
+    }
+    .sidebar-ul{
+        padding-left: 3px;
+    }
+}
+
+/* @media only screen and (min-width:768px){
+    .icon{
+        display: none;
+    }
+
+} */
+
+
+/* topbar */
+
+.company-logo{
+    height: 50px;
+}
+.topbar-container{
+    background-color: rgb(6, 105, 105);
+    display: flex;
+    align-items: center;
+    height: 9vh;
+    justify-content: space-between;
+}
+
+.topbar-container-admin{
+    background-color: #74a1eb;
+    display: flex;
+    align-items: center;
+    height: 9vh;
+    justify-content: space-between;
+}
+.topbar-minicontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vh;
+}
+.company-name{
+    font-size: 30px;
+    color: whitesmoke;
+    letter-spacing: 15px;
+    font-style: italic;
+}
+.user{
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+
+.portal-mini-container{
+    display: flex;
+}

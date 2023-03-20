@@ -1,0 +1,298 @@
+.mobile-img{
+    height: 150px;
+    width: 200px;
+}
+.mini-card{
+    margin-bottom: 25px;
+}
+.row-mob-container{
+    padding-left: 20px;
+    
+}
+
+
+/* accessories */
+
+.access-img{
+    height: 150px;
+    width: 200px;
+}
+
+
+.cart-img{
+    height: 50px;
+}
+
+.cart-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    margin: 15px;
+    box-shadow: 10px 10px 10px black;
+    background-color: whitesmoke;
+}
+.cart-total-container{
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px black;
+    background-color: whitesmoke;
+}
+.quantity-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.profile-card{
+    border: 1px solid black;
+}
+.profile-tags{
+    margin-bottom: 21px;
+    font-size: 20px;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/01/19/11/55/1000_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg");
+}
+
+.login-card{
+    border: 1px solid black;
+    padding: 25px;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+}
+.login-label{
+    font-style: italic;
+    font-size: 25px;
+    color: white;
+}
+
+.login-int{
+    width: 300px;
+    border-radius: 10px;
+}
+
+.register-container{
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+}
+.register-int{
+    width: 350px;
+    margin: 10px 0px;
+}
+.register-label{
+    margin: 12px 0px ;
+    font-style: italic;
+}
+
+
+.edit-label{
+    margin-bottom: 24px;
+}
+.edit-int{
+    margin-bottom: 20px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.order-img{
+    height: 100px;
+}
+
+.order-container{
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px black;
+    background-color: whitesmoke;
+}
+
+.forgot-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cccccc;
+    background-image: url("https://as2.ftcdn.net/v2/jpg/01/65/01/77/1000_F_165017799_byNziC85xNVTe02EYwwnl9LaAgctQPFr.jpg");
+}
+
+.forgot-minicard{
+    border: 1px solid black;
+    box-shadow: 10px 10px 10px black;
+    padding: 30px;
+    background-color: whitesmoke;
+}
+
+
+.login-heading{
+    font-size: 50px;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px lavender;
+}
+
+.login-input{
+    width: 350px;
+    height: 40px;
+    border: none;
+}
+.login-img{
+    width: 400px;
+    
+}
+
+.login-leftside{
+    background-image:linear-gradient(180deg,rgba(68,76,247,.3),rgba(68,76,247,.2)) ;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.login-button,.forgot-pass-button{
+    width: 350px;
+    height: 35px;
+    margin-top: 10px;
+}
+.login-rightside{
+    background-color: whitesmoke;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-signup{
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-signup:hover{
+    color: green;
+    
+}
+.login-cred{
+    font-weight: lighter;
+    margin-bottom: 0px;
+}
+
+
+
+.admin-mobile-image{
+    height: 150px;
+    width: 200px;
+}
+
+.admin-mini-card{
+    border: 1px solid black;
+    margin: 15px 0px;
+    border-radius: 5px;
+    padding: 10px 0px;
+    box-shadow: 10px 10px 10px black;
+    background-color: whitesmoke;
+}
+.btn-edit,.btn-delete{
+    margin-bottom: 5px;
+    width: 100px;
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.admin-mobile-brand{
+    font-size: 25px;
+}
+.admin-mobile-model{
+    font-size: 20px;
+}
+
+.admin-mobile-price{
+    font-size: 20px;
+}
+
+.admin-mobile-price:hover{
+    color: aqua;
+    cursor: pointer;
+}
+
+.admin-home-container,.admin-access-container{
+    background-image: url("https://media.istockphoto.com/id/1335422806/vector/dark-blue-dynamic-gradient-lines-abstract-background-technology-design.jpg?s=612x612&w=0&k=20&c=dEEQOWFw5YAt2L8GUIVdVlPRqsBV2UZZ3LE8gAOb_iM=");
+}
+
+.add-access-container,.add-access-mobile{
+    background-image: url("https://img.freepik.com/premium-vector/abstract-background-with-hexagons_395079-1050.jpg?w=1200");
+}
+
+.btn-cart{
+    margin-bottom: 5px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.mobile-container,.access-container,.orders-container,.carts-container,.profile-container{
+    background-image: url("https://images.pexels.com/photos/82256/pexels-photo-82256.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+.payment-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(45, 45, 107);
+    flex-direction: column;
+}
+
+.payment-card-image{
+    height: 30px;
+}
+.payment-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.card-number{
+    width: 290px;
+}
+
+.card-month{
+    width: 150px;
+}
+.card-cvv{
+    width: 100px;
+    margin-left: 30px;
+}
+.payment-btn{
+    width: 290px;
+    margin-top: 30px;
+}
+.payment-mini-card{
+    border: 1px solid black;
+    padding: 30px;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 10px black;
+}
+
+.payment-label{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+.useredit-btn{
+    width: 120px;
+}
+
+.profile-edit{
+    font-size: 19px;
+    color: black
+}
