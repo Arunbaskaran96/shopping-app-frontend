@@ -59,7 +59,7 @@ function Cart() {
     const test=data.map((item)=>item._id)
     var res=test.toString()
     try {
-      await axios.put(`http://localhost:8000/orders?order=${res}`,{"iscart":"no"},{
+      await axios.put(`https://shopify-backend-x9ad.onrender.com/orders?order=${res}`,{"iscart":"no"},{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }
