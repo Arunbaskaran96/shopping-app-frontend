@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { addItem, addsum } from '../Redux/Reducer/CartSlice'
@@ -8,11 +8,31 @@ import './Pages.css'
 function Cart() {
   const cartitems=useSelector(state=>state.Cart.item)
   const total=useSelector(state=>state.Cart.total)
+  const[data,setData]=useState([])
+  const [disable,setDisable]=useState(false)
+ 
   const dispatch=useDispatch()
+
+  // useEffect(()=>{
+  //   getItems()
+  // },[])
+
+  // const getItems=async()=>{
+  //   try {
+  //     const result=await axios.get("http://localhost:8000/carts",{
+  //       headers:{
+  //         Authorization:`${window.localStorage.getItem("token")}`
+  //       }
+  //     })
+  //     setCartitems(result.data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   useEffect(()=>{
     getCart()
-  },[cartitems])
+  },[])
 
   const getCart=async()=>{
     const cartList=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
@@ -21,7 +41,9 @@ function Cart() {
       }
     })
     dispatch(addItem(cartList.data))
+    setData(cartList.data)
   }
+
 
   const remove=async(item)=>{
     try {
@@ -32,6 +54,24 @@ function Cart() {
       console.log(error)
     }
   }
+  const makePayment=async()=>{
+    setDisable(true)
+    const test=data.map((item)=>item._id)
+    var res=test.toString()
+    try {
+      await axios.put(`http://localhost:8000/orders?order=${res}`,{"iscart":"no"},{
+        headers:{
+          Authorization:`${window.localStorage.getItem("token")}`
+        }
+      })
+      alert("Your order has been placed")
+      getCart()
+    } catch (error) {
+      setDisable(false)
+      console.log(error)
+    }
+  }
+
 
   return (
     <div className='container carts-container'>
@@ -81,7 +121,7 @@ function Cart() {
               cartitems.length>0?(
                 <div className='row' style={{marginTop:"20px"}}>
                 <h6>Total-{total}</h6>
-                <a href="/payment" target="_blank" className='btn btn-success'>Buy now</a>
+                <button disabled={disable} onClick={makePayment} target="_blank" className='btn btn-success'>Buy now</button>
               </div>
               ):(
                 <div>No cart item found</div>

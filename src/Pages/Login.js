@@ -89,18 +89,6 @@ function Login() {
                         <Link to='/forgot-password' className='btn btn-info forgot-pass-button'>Forgot password</Link>
                     </div>
                 </div>
-                <div className='row' style={{marginTop:"25px"}}>
-                    <div className='col-md-6 text-center'>
-                        <h6>User Credentail</h6>
-                        <p className='login-cred'>Email:arun@gmail.com</p>
-                        <p className='login-cred'>password:Arun</p>
-                    </div>
-                    <div className='col-md-6 text-center'>
-                        <h6>Admin Credentail</h6>
-                        <p className='login-cred'>Email:admin@gmail.com</p>
-                        <p className='login-cred'>password:Admin</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
