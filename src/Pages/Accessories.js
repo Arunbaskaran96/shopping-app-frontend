@@ -25,7 +25,7 @@ function Accessories() {
 
 
   const addCart=async(item)=>{
-    const access=await axios.post("https://shopify-backend-x9ad.onrender.com//addcart",item,{
+    const access=await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
