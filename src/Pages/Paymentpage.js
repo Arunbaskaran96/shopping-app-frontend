@@ -1,35 +1,77 @@
-import { useFormik } from 'formik'
-import React from 'react'
+
+import React, { useEffect, useState } from 'react'
 import './Pages.css'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+
+
 
 function Paymentpage() {
-    const formik=useFormik({
-        initialValues:{
-            number:"",
-            date:"",
-            cvv:""
-        },
-        validate:(value)=>{
-            let errors={}
+    const nav=useNavigate()
+    // const [carts,setCarts]=useState([])
 
-            if(!value.number){
-                errors.number="Please enter number"
-            }
-            if(!value.date){
-                errors.date="Please enter date"
-            }
-            if(!value.cvv){
-                errors.cvv="Please enter cvv"
-            }
-            return errors
-        },
-        onSubmit:(value)=>{
-            console.log(value)
+    useEffect(()=>{
+        getData()
+    },[])
+
+    const getData=async()=>{
+        try {
+            const {data}=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
+                headers:{
+                    Authorization:`${window.localStorage.getItem("token")}`
+                }
+            })
+            
+            
+            const test=await data.map((item)=>item._id)
+            var res=test.toString()
+            await axios.put(`https://shopify-backend-x9ad.onrender.com/orders?order=${res}`,{"iscart":"no"},{
+                headers:{
+                  Authorization:`${window.localStorage.getItem("token")}`
+                }
+              })
+              alert("Successfully Your order has been placed")
+              nav("/navbar/cart")
+        } catch (error) {
+            console.log(error)
         }
-    })
+    }
+
+
+
+
+    // const payment=async()=>{
+    //     // fetch("http://localhost:8000/create-checkout-session",{
+    //     //     method:"POST",
+    //     //     headers:{
+    //     //         'Content-Type':'application/json'
+    //     //     },
+    //     //     body:JSON.stringify({
+    //     //         items:[
+    //     //             {id:1,quantity:2},
+    //     //             {id:2,quantity:1}
+    //     //         ]
+    //     //     })
+    //     // }).then((res)=>{
+    //     //     if(res.ok) return res.json()
+    //     //     return res.json().then(json=>Promise.reject(json))
+    //     // }).then(({url})=>{
+    //     //     window.location=url
+    //     // }).catch(err=>{
+    //     //     console.log(err)
+    //     // })
+    //     try {
+    //       const {data}=  await axios.post("http://localhost:8000/create-checkout-session",{
+    //             items:carts
+    //         })
+    //         window.location=data.url
+    //     } catch (error) {
+    //         console.log(error)
+    //     }
+    // }
   return (
-    <div className='payment-container'>
-        <div className='payment-mini-card'>
+    <div>
+        {/* <div className='payment-mini-card'>
         <div className='payment-heading'>
             <h6 style={{fontSize:"20px"}}>Debit/Credit Card</h6>
             <div>
@@ -49,7 +91,8 @@ function Paymentpage() {
             <input className='btn btn-success payment-btn' type='submit' value='Make Payment'/>
         </div>
         </form>
-        </div>
+        </div> */}
+        <h5>Please wait...</h5>
     </div>
   )
 }

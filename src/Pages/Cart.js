@@ -1,15 +1,17 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+
 import { addItem, addsum } from '../Redux/Reducer/CartSlice'
 import './Pages.css'
+
 
 function Cart() {
   const cartitems=useSelector(state=>state.Cart.item)
   const total=useSelector(state=>state.Cart.total)
   const[data,setData]=useState([])
   const [disable,setDisable]=useState(false)
+
  
   const dispatch=useDispatch()
 
@@ -32,16 +34,20 @@ function Cart() {
 
   useEffect(()=>{
     getCart()
-  },[])
+  },[cartitems])
 
   const getCart=async()=>{
-    const cartList=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
-      headers:{
-        Authorization:`${window.localStorage.getItem("token")}`
-      }
-    })
-    dispatch(addItem(cartList.data))
-    setData(cartList.data)
+    try {
+      const cartList=await axios.get("https://shopify-backend-x9ad.onrender.com/carts",{
+        headers:{
+          Authorization:`${window.localStorage.getItem("token")}`
+        }
+      })
+      dispatch(addItem(cartList.data))
+      setData(cartList.data)
+    } catch (error) {
+      console.log(error)
+    }
   }
 
 
@@ -64,13 +70,35 @@ function Cart() {
           Authorization:`${window.localStorage.getItem("token")}`
         }
       })
-      alert("Your order has been placed")
+      // alert("Your order has been placed")
       getCart()
     } catch (error) {
       setDisable(false)
       console.log(error)
     }
   }
+
+
+  const handlePayment=async()=>{
+    try {
+      const {data}=  await axios.post("https://shopify-backend-x9ad.onrender.com/create-checkout-session",{
+            items:cartitems
+        })
+        if(data){
+          window.location=data.url
+        }
+        
+    } catch (error) {
+        console.log(error)
+    }
+  }
+
+
+
+
+
+
+
 
 
   return (
@@ -121,7 +149,8 @@ function Cart() {
               cartitems.length>0?(
                 <div className='row' style={{marginTop:"20px"}}>
                 <h6>Total-{total}</h6>
-                <button disabled={disable} onClick={makePayment} target="_blank" className='btn btn-success'>Buy now</button>
+                {/* <button disabled={disable} onClick={makePayment} target="_blank">Buy now</button> */}
+                <button  className='btn btn-success' onClick={handlePayment}>Buy Now</button>
               </div>
               ):(
                 <div>No cart item found</div>

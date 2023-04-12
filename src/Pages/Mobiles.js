@@ -27,7 +27,7 @@ function Mobiles() {
 
   const addCart=async(item)=>{
     try {
-      const mobile=await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
+      await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
         headers:{
           Authorization:`${window.localStorage.getItem("token")}`
         }

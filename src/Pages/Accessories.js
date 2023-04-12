@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './Pages.css'
 import{Access, addAccessories} from '../Redux/Reducer/AccessoriesSlice'
-import { addItem } from '../Redux/Reducer/CartSlice'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -26,7 +25,7 @@ function Accessories() {
 
 
   const addCart=async(item)=>{
-    const access=await axios.post("https://shopify-backend-x9ad.onrender.com/addcart",item,{
+    const access=await axios.post("https://shopify-backend-x9ad.onrender.com//addcart",item,{
       headers:{
         Authorization:`${window.localStorage.getItem("token")}`
       }
